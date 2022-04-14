@@ -47,6 +47,23 @@ const customers = [
   }
 ]
 class App extends Component{
+
+  //변경될 수 있는 값
+  state = {
+    customers: ""
+  }
+
+  componentDidMount(){
+    this.callApi().then(res => this.setState({customers: res}))
+    .catch(err => console.log(err);)
+  }
+
+  callApi = async() => {
+    const response = await fetch('api/customers');
+    const body = await response.json();
+    return body;
+  }
+  
   render(){
       const {classes} = this.props;
     return (
