@@ -1,5 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+# 서버를 위한 gitignore
 # dependencies
 /node_modules
 /.pnp
